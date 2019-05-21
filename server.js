@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/webfejl'));
+app.use(express.static('./dist/angular-basics5'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname,'/dist/webfejl/index.html'));
+res.sendFile(path.join(__dirname,'/dist/angular-basics5/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
