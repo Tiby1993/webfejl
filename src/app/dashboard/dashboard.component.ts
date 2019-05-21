@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
         .subscribe((data: item) => {
           this.items=data;
     });
-  }path_lower
+  }
 
   openItem(path: string) {
     this.path.path=path;
