@@ -4,7 +4,7 @@ import { item } from './item.model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
-    "Authorization": "Bearer sl.ADXDQ5vI5E6rUGJBzvzh7XPjDtIW6oQlhVLw5BNTKOQzBRhzS7iZyDg9uqOARC23gQrdOcz5hRUQ3RmVQcOU3qN08lGZherudEqHGVsHWS1Tak6--DIao3862_zQ5tb1iN3tuizV",
+    "Authorization": "Bearer sl.ADpfFuvKlZjrM3fxqsm1t69aIvt9VfPYd92eBRyDQeee4_SqFsqorhoS7jCmNLMvXZiaso5YZ0RxSIE_MphD3YzZhSEBRMVNeiDYlR-pXj9HxvEIHIXOgtI4FmV6_8ry2c5xLJym",
     'Content-Type': 'application/json' 
   })
 };
@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
         .subscribe((data: item) => {
           this.items=data;
     });
-  }path_lower
+  }
 
   openItem(path: string) {
     this.path.path=path;
