@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --aot --prod",
+    "e2e": "ng e2e"
   },
+
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
@@ -46,10 +47,12 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0"
+    "tslint": "~5.11.0",
+    "typescript": "~3.1.6"
   },
   "engines": {
-    "node": "8.15.3",
+    "node": "8.12.0",
     "npm": "6.4.1"
   }
+  
 }
