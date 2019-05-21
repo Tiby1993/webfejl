@@ -1,7 +1,7 @@
 <router-outlet></router-outlet>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h1 class="page-header">{{path.path}}</h1>
-    <button (click)="backItem()">Vissza</button>
+    <button class="btn btn-default" (click)="backItem()">Vissza</button>
     <div class="row placeholders">
       <div *ngFor="let item of items.entries">
         <div class="col-xs-6 col-sm-3 placeholder">
@@ -9,8 +9,8 @@
             height="200" class="img-responsive" alt="Generic placeholder thumbnail">
           <h4>{{item.name}}</h4>
           <span class="text-muted">{{item.tag}}</span>
-          <button (click)="openItem(item.path_lower)">Open</button>
-          <button (click)="delItem(item.path_lower)">Delete</button>
+          <button class="btn btn-success" (click)="openItem(item.path_lower)">Open</button>
+          <button class="btn btn-danger" (click)="delItem(item.path_lower)">Delete</button>
         </div>
       </div>
     </div>
