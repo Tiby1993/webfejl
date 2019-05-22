@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { item } from './item.model';
 
+
+
 const httpOptions = {
   headers: new HttpHeaders({ 
-    "Authorization": "Bearer Xj_wTp9qO2AAAAAAAAAAOKGaH-fw2Xt8R19OfpIIyan2wVGR2klah5PLOrouLO3f",
+    "Authorization": "Bearer Xj_wTp9qO2AAAAAAAAAAQAR5XHBDHooB4OGZVrii7byReZJSICo6gVjfzH1p7mPb",
     'Content-Type': 'application/json' 
   })
 };
@@ -54,17 +56,19 @@ export class DashboardComponent implements OnInit {
     var path = "//";
     for (var i = 1; i < strArr.length-1; i++) {
       path += strArr[i];
+    }
+    this.path.path=path;
+    this._http.post(this.apiUrl, this.path,httpOptions)
+        .subscribe((data: item) => {
+          this.items=data;
+    });
   }
-  this.path.path=path;
-  this._http.post(this.apiUrl, this.path,httpOptions)
-      .subscribe((data: item) => {
-        this.items=data;
-  });
-  }
+  
   delItem(item: item){
     console.log(item);
     this._http.post(this.delUrl, item,httpOptions);
     this.openItem(this.path.path);
   };
+  
 
 }
