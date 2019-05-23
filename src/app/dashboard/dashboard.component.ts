@@ -6,7 +6,7 @@ import { item } from './item.model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
-    "Authorization": "Bearer Xj_wTp9qO2AAAAAAAAAAU4qXv0oHhIc65sfJ0wj1o0_LVQWVmnPwAqtG31Mo04N5",
+    "Authorization": "Bearer Xj_wTp9qO2AAAAAAAAAAVOe0S_aG2vKrCgMqCn_GnaWWqkxglUAAMNW9RlmErtS7",
     'Content-Type': 'application/json' 
   })
 };
